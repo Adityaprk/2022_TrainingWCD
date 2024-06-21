@@ -4,7 +4,10 @@ public class RobotMap {
     //Ports On Robot
     //What Type Of Port
     static final public int DIO1 = 1;
-    static final public int PWM1 = 1;
+	static final public int PWM1 = 1;
+	static final public int PWM2 = 2;
+	static final public int PWM3 = 3;
+	static final public int PWM4 = 4;
     static final public int CANBUS1 = 1;
     static final public int CANBUS2 = 2;
     static final public int CANBUS3 = 3;
@@ -22,7 +25,10 @@ public class RobotMap {
 	static final public int LOWER_SHOOTER = CANBUS5;
 	static final public int DT_LEFT_FORWARD = CANBUS6;
 	static final public int INTAKE = PWM1;
+	static final public int TRANSFER = PWM2;
+	static final public int TRANSFER2 = PWM4;
 	static final public int TURRET_SPINNER = CANBUS7;
+	static final public int SHOOTER_ANGLER = PWM3;
 
     //Ports Off Robot
 	//Joysticks
@@ -30,7 +36,7 @@ public class RobotMap {
 	public static final int JOYSTICK_DRIVE_RIGHT = 1;
 	public static final int JOYSTICK_MANIUPLATOR = 2;
 	public static final int GAMEPAD_MANIPULATOR = 2;
-	public static final int GAMEPAD_ENDGAME = 3;
+	public static final int GAMEPAD_DRIVER = 3;
 
 	//Joystick Buttons
 	public static final int DRIVER_TRIGGER = 1;
@@ -59,3 +65,5 @@ public class RobotMap {
 	public static final double DRIVEBOX_KA_CONSTANT = 0.243;//to be defined later
 	public static final double DRIVE_WHEEL_DIAMETER_IN = 6;
 }
+
+//nice

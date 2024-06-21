@@ -26,6 +26,7 @@ protected Shooter shooter;
 protected Vision vision;
 protected Autonomous auto;
 protected Intake intake;
+protected Transfer transfer;
 
 
   @Override
@@ -36,16 +37,20 @@ protected Intake intake;
     shooter = new Shooter();
     auto = new Autonomous();
     intake = new Intake();
+    transfer = new Transfer();
 
     driveTrain.teleopInit();
-    turret.teleopInit();
+    //turret.teleopInit();
     shooter.teleopInit();
-    //vision.teleopInit();
     intake.teleopInit();
+    transfer.teleopInit();
+    vision.teleopInit();
   }
 
   @Override
   public void robotPeriodic() {
+    intake.periodic();
+    transfer.periodic();
   }
 
   @Override
@@ -60,15 +65,15 @@ protected Intake intake;
 
   @Override
   public void teleopPeriodic() {
-   // driveTrain.teleopControl();
-    //turret.teleopControl();
-    //shooter.teleopControl();
+    driveTrain.teleopControl();
+    //turret.teleopControl(); nice
+    shooter.teleopControl();
     intake.teleopControl();
-    //vision.teleopControl();
+    transfer.teleopControl();
+    vision.teleopControl();
 
 
-
-    vision.updateVisionVals();
+    
   }
 
   @Override
